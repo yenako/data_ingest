@@ -123,6 +123,8 @@ sudo systemctl stop cloudera-scm-server
 sudo systemctl start cloudera-scm-server
 sudo tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 
+sudo yum install -y cloudera-manager-daemons cloudera-manager-agent
+sudo systemctl start cloudera-scm-agent
 
 
 [create table in MySQL]
@@ -134,5 +136,4 @@ create user 'training'@'%' identified by 'training';
 grant all privileges on *.* to 'training'@'%';
 
 
-sudo yum install -y cloudera-manager-daemons cloudera-manager-agent
-sudo systemctl start cloudera-scm-agent
+
