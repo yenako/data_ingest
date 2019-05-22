@@ -24,6 +24,7 @@ du
 
 [install mySQL server]
 
+#
 sudo yum install mariadb-server
 sudo systemctl stop mariadb
 sudo systemctl enable mariadb
