@@ -135,5 +135,8 @@ use test;
 create user 'training'@'%' identified by 'training';
 grant all privileges on *.* to 'training'@'%';
 
+[Hive tables]
+
+
 
 
