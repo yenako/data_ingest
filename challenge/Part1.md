@@ -1,12 +1,12 @@
-1. sudo useradd training -u 3800
-2. sudo passwd training    /training
-3. 
+sudo useradd training -u 3800
+sudo passwd training    
+
 tail /etc/group
 sudo groupadd skcc
 sudo usermod -a -G skcc training
-4. sudo usermod -aG wheel training
+sudo usermod -aG wheel training
 
-2.
+
 sudo vi /ets/hosts
 172.31.12.1     ts1.test.com    ts1
 172.31.10.5     ts2.test.com    ts2
@@ -14,11 +14,14 @@ sudo vi /ets/hosts
 172.31.11.59    ts4.test.com    ts4
 172.31.14.239   ts5.test.com    ts5
 
-3. uname -mrs
-4. df 
+uname -mrs
+
+df 
 du
-5. yum repolist enabled
-6. sudo cat /etc/passwd
+
+yum repolist enabled
+
+sudo cat /etc/passwd
 
 
 
@@ -124,6 +127,7 @@ use test;
 (created table using authors.sql and posts.sql)
 create user 'training'@'%' identified by 'training';
 grant all privileges on *.* to 'training'@'%';
+
 
 
 sudo yum install -y cloudera-manager-daemons cloudera-manager-agent
