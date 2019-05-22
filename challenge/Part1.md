@@ -1,10 +1,15 @@
 sudo useradd training -u 3800
 sudo passwd training    
 
+grep training /etc/passwd
+grep training /etc/group
+
 tail /etc/group
 sudo groupadd skcc
 sudo usermod -a -G skcc training
 sudo usermod -aG wheel training
+
+
 
 
 sudo vi /ets/hosts
@@ -127,7 +132,6 @@ use test;
 (created table using authors.sql and posts.sql)
 create user 'training'@'%' identified by 'training';
 grant all privileges on *.* to 'training'@'%';
-
 
 
 sudo yum install -y cloudera-manager-daemons cloudera-manager-agent
